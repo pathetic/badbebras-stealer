@@ -19,7 +19,7 @@
 - [x] Process list
 
 # 🔨 Building:
-> Run the following command:
+Run the following command:  
 `cargo build --release`
 
 # 📋 Requirements:
